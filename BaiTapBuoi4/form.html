@@ -70,7 +70,7 @@
             id="phone"
             name="phone"
             placeholder="0xxxxxxxxx"
-            pattern="[0-9]{9}"
+            pattern="0[0-9]{9}"
             tabindex="5"
           />
         </div>
@@ -105,15 +105,9 @@
             id="website"
             name="website"
             placeholder="https://..."
-            disabled
             tabindex="8"
           />
         </div>
-        <p>
-          disabled dùng để vô hiệu hóa thẻ input bao gồm cả dữ liệu có sẵn bên
-          trong còn thẻ readonly nó sẽ chỉ cho phép người dùng nhìn nhưng dữ
-          liệu có sẵn bên trong vẫn sẽ đuọc gửi đi và xử lí
-        </p>
 
         <div>
           <label for="address">Địa chỉ:</label><br />
@@ -134,8 +128,25 @@
             name="zipcode"
             maxlength="6"
             placeholder="700000"
+            value="ZC-0001"
+            readonly
             tabindex="10"
           />
+          <!--           
+            readonly: hiển thị mã học viên cho người dùng xem nhưng không cho
+            sửa, và giá trị này vẫn được gửi lên server khi submit form -->
+        </div>
+
+        <div>
+          <label for="demo-disabled">Demo disabled:</label><br />
+          <input
+            type="text"
+            id="demo-disabled"
+            value="đây là ví dụ cho disabled"
+            disabled
+          />
+          <!-- disabled dùng để vô hiệu hóa thẻ input bao gồm cả dữ liệu có sẵn bên
+            trong -->
         </div>
       </fieldset>
 
@@ -518,8 +529,16 @@
           />
         </div>
 
-        <input type="hidden" name="course_id" value="F8_2024" />
-        <input type="hidden" name="utm_source" value="website" />
+        <label for="course_id" hidden>Mã khoá học (ẩn)</label>
+        <input type="hidden" id="course_id" name="course_id" value="F8_2024" />
+
+        <label for="utm_source" hidden>Nguồn truy cập (ẩn)</label>
+        <input
+          type="hidden"
+          id="utm_source"
+          name="utm_source"
+          value="website"
+        />
       </fieldset>
 
       <div>
@@ -529,3 +548,28 @@
     </form>
   </body>
 </html>
+
+<!-- Trả lời câu hỏi trắc nghiệm -->
+
+<!-- 
+Câu 1: Sự khác nhau giữa method="get" và method="post" là gì?
+- GET: gửi dữ liệu qua query string trên URL, dễ bookmark, giới hạn độ dài, không phù hợp dữ liệu nhạy cảm như mật khẩu vì nó sẽ hiển thị mật khẩu trên url.
+- POST: gửi dữ liệu trong body request, không lộ trên URL, không bị giới hạn độ dài như GET, phù hợp form đăng ký/đăng nhập và các dữ liệu riêng tư.
+
+Câu 2: Tại sao cần có enctype="multipart/form-data" khi form có upload file?
+- Vì khi upload file, trình duyệt phải gửi dữ liệu theo nhiều "phần" (text + file nhị phân).
+- Nếu không dùng "multipart/form-data", file sẽ không được gửi đúng định dạng, server không đọc được file.
+
+Câu 3: Trường type="hidden" có tác dụng gì? Người dùng có thể xem được giá trị của nó không?
+- Dùng để gửi dữ liệu mà user không cần nhập (ví dụ: mã khoá học, nguồn truy cập...).
+- Người dùng không thấy trên giao diện, nhưng vẫn có thể xem/chỉnh nếu mở DevTools hoặc xem mã nguồn.
+
+Câu 4: Tại sao checkbox không được check thì không gửi lên server, còn radio thì luôn gửi một giá trị?
+- Checkbox: chỉ những ô được check mới xuất hiện trong form data; ô không check coi như không tồn tại.
+- Radio: trong một nhóm name, nếu chọn 1 ô thì khi submit luôn gửi đúng 1 giá trị (nếu không chọn gì thì không gửi)
+-> còn nếu không có trường name thì ta có thể tick hết giống checkbox.
+
+Câu 5: Sự khác nhau giữa disabled và readonly là gì?
+- disabled: input bị vô hiệu hoá hoàn toàn, không focus được, thường hiển thị mờ, và KHÔNG gửi giá trị lên server.
+- readonly: chỉ khóa việc sửa giá trị, vẫn focus được, và VẪN gửi giá trị hiện tại lên server.
+-->
