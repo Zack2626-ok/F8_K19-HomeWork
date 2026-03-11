@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <style>
+      h1 {
+        color: blueviolet;
+      }
+
+      .section {
+        background: green;
+      }
+      p {
+        color: rgb(255, 239, 8);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>COURSES PAGE</h1>
+    <!--
+  Phan tu nay co: tag(h1)  + Internal css
+  Selector thang: Internal vi nó có độ ưu tiên cao hơn thẻ tag hay (external)
+  Mau hien thi: blueviolet
+-->
+
+    <h2 class="title">Danh sach khoa hoc</h2>
+    <!--
+  Phan tu nay co: tag(h2) + class(.title) 
+  Selector thang: title vi nó có độ ưu tiên cao hơn thẻ tag hay (external)
+  Mau hien thi: seagreen 
+-->
+    <div class="section">
+      <p class="hightlight">HTML co ban</p>
+      <!--
+  Cac Phan tu nay co: tag(p) + class(.highlight) + Internal css
+  Selector thang: Internal Css vì nó đuọc viết sau 2 thẻ link
+  Mau hien thi: rgb(255, 239, 8)
+-->
+      <p class="hightlight">CSS co ban</p>
+      <p class="hightlight">Javascript nang cao</p>
+      <p class="hightlight">ReactJS</p>
+      <p class="hightlight">ReactJS</p>
+      <p class="hightlight">NodeJS</p>
+    </div>
+  </body>
+</html>

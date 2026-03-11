@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <style>
+      * {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: springgreen" class="title" id="special">DASHBOARD</h1>
+    <!--
+  Phan tu nay co: tag(h1) + class(.title) + id(#special) + inline style + internal css
+  Selector thang: inline style vì nó có độ ưu tiên cao nhất (inline style > ( id file theme > id file base > class file theme > class > file base > h1) )
+  Mau hien thi: springgreen
+-->
+    <h2 class="section">Tong quan he thong</h2>
+    <!--
+  Phan tu nay co: tag(h2) + class(.section) 
+  Selector thang: section vi nó có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: brown 
+-->
+    <div class="big">
+      <!--
+  Phan tu nay co: tag(div) + class(.section) 
+  Selector thang: section vì thẻ div ko có thuộc tính
+  Mau hien thi: ko hiển thỉ bởi thẻ con bị ghi đè bởi class khác 
+-->
+      <h3 class="title">Courses</h3>
+      <!--
+  Cac Phan tu nay co: tag(h3) + class(.title) 
+  Selector thang: .title ở file theme vi nó có độ ưu tiên cao hơn thẻ tag và nó ghi đè lên .title ở file base
+  Mau hien thi: seagreen
+-->
+      <p class="highlight">khoa hoc</p>
+      <!--
+  Cac Phan tu nay co: tag(p) + class(.highlight) 
+  Selector thang: .highlight ở file theme vi nó có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: tomato
+-->
+      <h3 class="title">Students</h3>
+      <p class="highlight">hoc sinh</p>
+      <h3 class="title">Teachers</h3>
+      <p class="highlight">giao vien</p>
+      <h3 class="title">Orders</h3>
+      <p class="highlight">don dat</p>
+      <h3 class="title">Reports</h3>
+      <p class="highlight">bao cao</p>
+    </div>
+  </body>
+</html>

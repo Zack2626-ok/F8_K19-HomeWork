@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body>
+    <h1 style="color: darkslategrey">ORDERS PAGE</h1>
+    <!--
+  Phan tu nay co: tag(h1)  + inline style
+  Selector thang: inline style vi inline style có độ ưu tiên cao nhất
+  Mau hien thi: darkslategrey
+-->
+    <h2 style="color: rgb(29, 9, 100)" class="title" id="special">
+      Danh sach don hang
+    </h2>
+    <!-- Cac Phan tu nay co: tag(h2) + class(.title) + id(#special) + inline style
+  Selector thang: inline style vì inline style có độ ưu tiên cao nhất
+  Mau hien thi: rgb(29, 9, 100) -->
+
+    <!-- id special được ưu tiên hơn  -->
+    <p style="color: aquamarine">Don hang 001</p>
+    <!-- Cac Phan tu nay co: tag(p) + inline style
+  Selector thang: inline style vì inline style có độ ưu tiên cao nhất
+  Mau hien thi: aquamarine -->
+    <p style="color: chocolate">Don hang 002</p>
+    <p class="highlight">Don hang 003</p>
+    <!-- Cac Phan tu nay co: tag(p) + class(.highlight)
+  Selector thang: highlight vì highlight có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: tomato -->
+
+    <p class="highlight">Don hang 004</p>
+  </body>
+</html>

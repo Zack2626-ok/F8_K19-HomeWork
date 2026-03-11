@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body>
+    <h1 class="title" id="main">HOME PAGE</h1>
+    <!--
+  Phan tu nay co: tag(h1) + class(.title) + id(#main) 
+  Selector thang: #main vì nó có độ ưu tiên cao hơn class và thẻ tag
+  Mau hien thi: teal
+-->
+    <h2 class="title">Gioi thieu he thong</h2>
+    <!--
+  Phan tu nay co: tag(h2) + class(.title)
+  Selector thang: .title vì nó có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: seagreen
+-->
+    <h3 class="section">Gioi thieu he thong</h3>
+    <!--
+  Phan tu nay co: tag(h3) + class(.section)
+  Selector thang: .section vì nó có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: brown
+-->
+    <p>HTML</p>
+    <!--
+  Mau hien thi: black
+-->
+    <p>CSS</p>
+    <p>Javascript</p>
+    <p>Python</p>
+
+    <!-- sau khi quan sát thì tuy h1 và h2 có cùng title nhưng:
+     *h1: có color bị ghi đề bởi id bên file base.css -> id có độ ưu tiên cao hơn nên ko bị ghi đè bởi class title bên file theme.css 
+     *h2: có color bị ghi đè bởi color bên file theme.css -> nhưng nếu đổi lại thẻ link ../css/theme.css lên trước ../css/base.css thì bên theme sẽ ghi đè base -->
+  </body>
+</html>

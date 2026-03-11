@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+  </head>
+  <body>
+    <h1>REPORT PAGE</h1>
+    <!-- Cac Phan tu nay co: tag(p) 
+  Selector thang: p vì ko có class id hay inline css 
+  Mau hien thi: red -->
+    <h2 class="title">Thong ke he thong</h2>
+    <!-- Cac Phan tu nay co: tag(p) + class(.title)
+  Selector thang: title vì title có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: seagreen -->
+    <div class="section" id="main">
+      <p class="title">Tong so hoc vien</p>
+      <p class="big">Tong so khoa hoc</p>
+      <!-- Cac Phan tu nay co: tag(p) + class(.big)
+  Selector thang: .big vì .big có độ ưu tiên cao hơn thẻ tag
+  Mau hien thi: chartreuse -->
+      <p class="highlight">Doanh thu</p>
+    </div>
+  </body>
+</html>
