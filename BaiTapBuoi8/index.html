@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .layout {
+        background: #eee;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .control-panel,
+      .preview-area {
+        vertical-align: top;
+        display: inline-block;
+      }
+
+      .control-panel {
+        width: 20%;
+        height: 100vh;
+        background: #f5f5f5;
+      }
+
+      .preview-area {
+        width: 77%;
+        margin-left: 20px;
+      }
+
+      .groupLabel {
+        padding: 5px;
+        background-color: #ddd;
+      }
+
+      .skill-item {
+        background: #f0f0f0;
+      }
+
+      .contact {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 15px;
+      }
+      .theme {
+        height: 100vh;
+      }
+
+      /* xử lí   */
+      input[type="radio"]:checked + label {
+        font-weight: bold;
+      }
+
+      .control-panel:has(#theme-light:checked) ~ .preview-area .theme {
+        background: white;
+      }
+
+      .control-panel:has(#theme-gray:checked) ~ .preview-area .theme {
+        background: lightgray;
+      }
+
+      .control-panel:has(#theme-yellow:checked) ~ .preview-area .theme {
+        background: lightyellow;
+      }
+
+      .control-panel:has(#theme-blue:checked) ~ .preview-area .theme {
+        background: lightblue;
+      }
+
+      .control-panel:has(#theme-pink:checked) ~ .preview-area .theme {
+        background: pink;
+      }
+
+      .control-panel:has(#size-small:checked) ~ .preview-area .name {
+        font-size: small;
+      }
+      .control-panel:has(#size-medium:checked) ~ .preview-area .name {
+        font-size: medium;
+      }
+      .control-panel:has(#size-large:checked) ~ .preview-area .name {
+        font-size: large;
+      }
+      .control-panel:has(#styleText-normal:checked) ~ .preview-area .name {
+        text-transform: none;
+      }
+      .control-panel:has(#styleText-uppercase:checked) ~ .preview-area .name {
+        text-transform: uppercase;
+      }
+      .control-panel:has(#textColor-dark:checked) ~ .preview-area .name {
+        color: black;
+      }
+      .control-panel:has(#textColor-blue:checked) ~ .preview-area .name {
+        color: blue;
+      }
+      .control-panel:has(#textColor-green:checked) ~ .preview-area .name {
+        color: green;
+      }
+      .control-panel:has(#textColor-red:checked) ~ .preview-area .name {
+        color: red;
+      }
+      .control-panel:has(#margin-left:checked) ~ .preview-area .theme {
+        text-align: left;
+      }
+      .control-panel:has(#margin-center:checked) ~ .preview-area .theme {
+        text-align: center;
+      }
+      .control-panel:has(#margin-right:checked) ~ .preview-area .theme {
+        text-align: right;
+      }
+      .control-panel:has(#sizeJob-small:checked) ~ .preview-area .job {
+        font-size: small;
+      }
+      .control-panel:has(#sizeJob-medium:checked) ~ .preview-area .job {
+        font-size: medium;
+      }
+      .control-panel:has(#sizeJob-large:checked) ~ .preview-area .job {
+        font-size: large;
+      }
+      .control-panel:has(#letterSpc-tight:checked) ~ .preview-area .job {
+        letter-spacing: -0.05em;
+      }
+      .control-panel:has(#letterSpc-normal:checked) ~ .preview-area .job {
+        letter-spacing: normal;
+      }
+      .control-panel:has(#letterSpc-wide:checked) ~ .preview-area .job {
+        letter-spacing: 0.05em;
+      }
+      .control-panel:has(#sizeDesc-small:checked) ~ .preview-area .desc {
+        font-size: small;
+      }
+      .control-panel:has(#sizeDesc-medium:checked) ~ .preview-area .desc {
+        font-size: medium;
+      }
+      .control-panel:has(#sizeDesc-large:checked) ~ .preview-area .desc {
+        font-size: large;
+      }
+      .control-panel:has(#letterDesc-tight:checked) ~ .preview-area .desc {
+        line-height: 1;
+      }
+      .control-panel:has(#letterDesc-normal:checked) ~ .preview-area .desc {
+        line-height: normal;
+      }
+      .control-panel:has(#letterDesc-loose:checked) ~ .preview-area .desc {
+        line-height: 1.5;
+      }
+      .control-panel:has(#contactColor-dark:checked) ~ .preview-area .contact {
+        background: #000;
+        color: white;
+      }
+      .control-panel:has(#contactColor-blue:checked) ~ .preview-area .contact {
+        background: blue;
+        color: white;
+      }
+      .control-panel:has(#contactColor-light:checked) ~ .preview-area .contact {
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="column">
+        <div class="control-panel">
+          <!-- bg color -->
+          <p class="groupTitle">1. Màu nền hồ sơ</p>
+          <input type="radio" name="theme" id="theme-light" cla hidden />
+          <label class="groupLabel" for="theme-light">Light</label>
+
+          <input type="radio" name="theme" id="theme-gray" hidden />
+          <label class="groupLabel" for="theme-gray">Gray</label>
+
+          <input type="radio" name="theme" id="theme-yellow" hidden />
+          <label class="groupLabel" for="theme-yellow">Yellow</label>
+
+          <input type="radio" name="theme" id="theme-blue" hidden />
+          <label class="groupLabel" for="theme-blue">Blue</label>
+
+          <input type="radio" name="theme" id="theme-pink" hidden />
+          <label class="groupLabel" for="theme-pink">Pink</label>
+
+          <p class="groupTitle">2. Kích thước tên</p>
+          <input type="radio" name="size" id="size-small" hidden />
+          <label class="groupLabel" for="size-small">Small</label>
+
+          <input type="radio" name="size" id="size-medium" hidden />
+          <label class="groupLabel" for="size-medium">Medium</label>
+
+          <input type="radio" name="size" id="size-large" hidden />
+          <label class="groupLabel" for="size-large">large</label>
+
+          <p class="groupTitle">3. Kiểu chữ tên</p>
+
+          <input type="radio" name="styleText" id="styleText-normal" hidden />
+          <label class="groupLabel" for="styleText-normal">Normal</label>
+
+          <input
+            type="radio"
+            name="styleText"
+            id="styleText-uppercase"
+            hidden
+          />
+          <label class="groupLabel" for="styleText-uppercase">Uppercase</label>
+
+          <p class="groupTitle">4. Màu chữ tên</p>
+          <input type="radio" name="textColor" id="textColor-dark" hidden />
+          <label class="groupLabel" for="textColor-dark">Dark</label>
+
+          <input type="radio" name="textColor" id="textColor-blue" hidden />
+          <label class="groupLabel" for="textColor-blue">Blue</label>
+
+          <input type="radio" name="textColor" id="textColor-green" hidden />
+          <label class="groupLabel" for="textColor-green">Green</label>
+
+          <input type="radio" name="textColor" id="textColor-red" hidden />
+          <label class="groupLabel" for="textColor-red">Red</label>
+
+          <p class="groupTitle">5. Căn lề hồ sơ</p>
+          <input type="radio" name="margin" id="margin-left" hidden />
+          <label class="groupLabel" for="margin-left">Left</label>
+
+          <input type="radio" name="margin" id="margin-center" hidden />
+          <label class="groupLabel" for="margin-center">Center</label>
+
+          <input type="radio" name="margin" id="margin-right" hidden />
+          <label class="groupLabel" for="margin-right">right</label>
+
+          <p class="groupTitle">6. Kích thước nghề nghiệp</p>
+          <input type="radio" name="sizeJob" id="sizeJob-small" hidden />
+          <label class="groupLabel" for="sizeJob-small">Small</label>
+
+          <input type="radio" name="sizeJob" id="sizeJob-medium" hidden />
+          <label class="groupLabel" for="sizeJob-medium">Medium</label>
+
+          <input type="radio" name="sizeJob" id="sizeJob-large" hidden />
+          <label class="groupLabel" for="sizeJob-large">Large</label>
+
+          <p class="groupTitle">7. Khoảng cách chữ nghề nghiệp</p>
+          <input type="radio" name="letterSpc" id="letterSpc-tight" hidden />
+          <label class="groupLabel" for="letterSpc-tight">Tight</label>
+
+          <input type="radio" name="letterSpc" id="letterSpc-normal" hidden />
+          <label class="groupLabel" for="letterSpc-normal">Normal</label>
+
+          <input type="radio" name="letterSpc" id="letterSpc-wide" hidden />
+          <label class="groupLabel" for="letterSpc-wide">Wide</label>
+
+          <p class="groupTitle">8. Kích thước mô tả</p>
+          <input type="radio" name="sizeDesc" id="sizeDesc-small" hidden />
+          <label class="groupLabel" for="sizeDesc-small">Small</label>
+
+          <input type="radio" name="sizeDesc" id="sizeDesc-medium" hidden />
+          <label class="groupLabel" for="sizeDesc-medium">Medium</label>
+
+          <input type="radio" name="sizeDesc" id="sizeDesc-large" hidden />
+          <label class="groupLabel" for="sizeDesc-large">Large</label>
+
+          <p class="groupTitle">9. Giãn dòng mô tả</p>
+          <input type="radio" name="letterDesc" id="letterDesc-tight" hidden />
+          <label class="groupLabel" for="letterDesc-tight">Tight</label>
+
+          <input type="radio" name="letterDesc" id="letterDesc-normal" hidden />
+          <label class="groupLabel" for="letterDesc-normal">Normal</label>
+
+          <input type="radio" name="letterDesc" id="letterDesc-loose" hidden />
+          <label class="groupLabel" for="letterDesc-loose">Loose</label>
+
+          <p class="groupTitle">10. Màu nút liên hệ</p>
+          <input
+            type="radio"
+            name="contactColor"
+            id="contactColor-dark"
+            hidden
+          />
+          <label class="groupLabel" for="contactColor-dark">Dark</label>
+
+          <input
+            type="radio"
+            name="contactColor"
+            id="contactColor-blue"
+            hidden
+          />
+
+          <label id="btn-contact" class="groupLabel" for="contactColor-blue"
+            >Blue</label
+          >
+
+          <input
+            type="radio"
+            name="contactColor"
+            id="contactColor-light"
+            hidden
+          />
+          <label class="groupLabel" for="contactColor-light">Light</label>
+        </div>
+
+        <div class="preview-area">
+          <p>Preview hồ sơ cá nhân</p>
+          <div class="theme">
+            <h1 class="name">Nguyễn Minh Khoa</h1>
+            <p class="job">Frontend Developer · Ho Chi Minh City</p>
+            <p class="desc">
+              Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây
+              dựng giao diện web hiện đại, tập trung vào hiệu suất và trải
+              nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành
+              sản phẩm thực tế.
+            </p>
+            <p>Kĩ năng</p>
+            <div class="skill-list">
+              <span class="skill-item">HTML 5</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">Figma Git</span>
+            </div>
+            <p>Sở thích</p>
+            <div class="hobby-list">
+              <span class="hobby-item">Nhiếp ảnh</span>
+              <span class="hobby-item">Đọc sách</span>
+              <span class="hobby-item">Du lịch</span>
+              <span class="hobby-item">Cà phê</span>
+            </div>
+            <p class="contact">[Liên hệ với tôi]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
