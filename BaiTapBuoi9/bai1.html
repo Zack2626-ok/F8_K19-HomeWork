@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        margin: 20px;
+      }
+
+      .layout > div {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .square {
+        width: 200px;
+        height: 200px;
+        border: 3px solid #d56854;
+      }
+
+      .rectangle {
+        width: 400px;
+        height: 200px;
+        border: 3px solid #609ad8;
+      }
+
+      .triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 150px solid #6dc978;
+      }
+      .triangle-down {
+        width: 0;
+        height: 0;
+        border-top: 150px solid #e3a031;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+      }
+      .triangle-left {
+        width: 0;
+        height: 0;
+        border-top: 100px solid transparent;
+        border-right: 150px solid #905cb2;
+        border-bottom: 100px solid transparent;
+      }
+      .triangle-right {
+        width: 0;
+        height: 0;
+        border-top: 100px solid transparent;
+        border-left: 150px solid #d48332;
+        border-bottom: 100px solid transparent;
+      }
+      .trapezium {
+        width: 150px;
+        border: 100px solid;
+        border-color: transparent transparent #61b99d transparent;
+      }
+      .triangle-wide {
+        width: 0;
+        border: 150px solid;
+        border-bottom: 100px solid;
+        border-color: transparent transparent #61b99d transparent;
+      }
+      .triangle-wide {
+        width: 0;
+        border: 150px solid;
+        border-bottom: 100px solid;
+        border-color: transparent transparent #61b99d transparent;
+      }
+      .triangle-high {
+        width: 0;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 200px solid #ad4430;
+      }
+      .triangle {
+        width: 0;
+        border: 150px solid;
+        border-color: transparent transparent #c05c19 transparent;
+      }
+      .arrow-right {
+        width: 0;
+        border: 150px solid;
+        border-color: transparent transparent transparent #529e86;
+      }
+      .arrow-left {
+        width: 0;
+        border: 150px solid;
+        border-color: transparent #8348a9 transparent transparent;
+      }
+      .flag {
+        width: 0;
+        border-top: 150px solid;
+        border-left: 240px solid;
+        border-right: 200px solid;
+        border-bottom: 150px solid;
+        border-color: #d15841 transparent #d15841 #d15841;
+      }
+
+      .text-f,
+      .text-8 {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .f-top {
+        margin: 0;
+        width: 0;
+        border-top: 100px solid;
+        border-left: 200px solid;
+        border-right: 200px solid;
+        border-color: #d15841;
+      }
+      .f-left {
+        margin: 0;
+        width: 0;
+        border-left: 100px solid;
+        border-top: 600px solid;
+        border-color: #d15841;
+      }
+      .f-middle {
+        margin-top: -400px;
+        width: 0;
+        border-top: 100px solid;
+        border-left: 200px solid;
+        border-right: 200px solid;
+        /* border-right: 200px solid; */
+        border-color: #d15841;
+      }
+
+      .text-8 .top,
+      .text-8 .bottom {
+        margin: 0;
+        width: 150px;
+        height: 150px;
+        border: 100px solid #d15841;
+        margin-bottom: 10px;
+      }
+
+      .text-8 .top {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="square"></div>
+      <div class="rectangle"></div>
+      <div class="triangle-up"></div>
+      <div class="triangle-down"></div>
+      <div class="triangle-left"></div>
+      <div class="triangle-right"></div>
+      <div class="trapezium"></div>
+      <div class="triangle-wide"></div>
+      <div class="triangle-high"></div>
+      <div class="triangle"></div>
+      <div class="arrow-right"></div>
+      <div class="arrow-left"></div>
+      <div class="flag"></div>
+    </div>
+    <div class="block">
+      <div class="text-f">
+        <div class="f-top"></div>
+        <div class="f-left"></div>
+        <div class="f-middle"></div>
+      </div>
+      <div class="text-8">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+          .overlay {
+            display: none;
+            padding: 150px 150px;
+            margin-left: 100px;
+            background: rgba(255, 0, 0, 0.5);
+          }
+          .modal {
+            display: inline-block;
+            margin-top: 50px;
+            width: 150px;
+            padding: 5px 10px;
+            color: #333333;
+            background: #ffffff;
+          }
+
+          .open-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #3b82f6;
+            color: #ffffff;
+          }
+
+          .close-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #ef4444;
+            color: #ffffff;
+          }
+
+          #modal-toggle:checked + .overlay {
+            display: block;
+          }
+        </style>
+      </head>
+      <body>
+        <button class="open-btn">
+          <label for="modal-toggle">Hiện thông báo</label>
+        </button>
+        <!-- bấm vô label trong button sẽ trỏ tới input  có id modal-toggle-->
+        <input type="checkbox" name="modal-toggle" id="modal-toggle" hidden />
+        <!-- dùng css để kiểm tra xem nếu nó đã checked thì sẽ tác động đến .overlay để nó hiện ra-->
+
+        <label for="modal-toggle" class="overlay">
+          <!-- khi bấm vô overlay thì nó sẽ tác động tới input checkbox có thể ẩn đi -->
+          <div class="modal">
+            <p>Đây là nội dung thông báo</p>
+            <button class="close-btn">
+              <label for="modal-toggle">X</label>
+              <!-- khi bấm vô label thì nó sẽ tác động tới input checkbox có thể ẩn đi -->
+            </button>
+          </div>
+        </label>
+      </body>
+    </html>
+  </body>
+</html>

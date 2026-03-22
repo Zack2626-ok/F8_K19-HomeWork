@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .toast {
+        display: none;
+        margin-top: 50px;
+        width: 150px;
+        padding: 10px 20px;
+        background: #66c267;
+      }
+
+      .close-btn {
+        margin-left: 10px;
+      }
+
+      #toast-toggle:checked + .toast {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="open-btn">
+      <label for="toast-toggle">Hiện thông báo</label>
+    </button>
+    <!-- 0. lúc đầu set cho .toast display: none để nó ẩn đi thông báo  -->
+    <!-- 1. khi bấm vô label nó sẽ trỏ tới input có id toast-toggle-->
+    <input type="checkbox" name="toast-toggle" id="toast-toggle" hidden />
+    <!-- dùng css kiểu:
+     #toast-toggle:checked + .toast {
+        display: block;
+      } có dụng ý là bắt sự kiện checked của thẻ input rồi css cho thẻ anh em liền kề của nó là .toast display block -->
+    <div class="toast">
+      <span>Lưu thành công</span>
+      <button class="close-btn">
+        <label for="toast-toggle">X</label>
+        <!-- thẻ label này có dụng ý như trên do là checkbox nên bấm lại nó sẽ hiểu là bỏ tick thì do class toast mặc định là display none nên nó sẽ ko hiển thị điều này cũng thể hiện qua việc bấm lại button open-btn -->
+      </button>
+    </div>
+  </body>
+</html>
