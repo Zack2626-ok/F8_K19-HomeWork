@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+}
+
+.open-btn {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem 4rem;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-weight: bold;
+  background: #f05123;
+  border-radius: 6rem;
+  color: #fff;
+}
+
+.open-btn:hover {
+  background: #d8431c;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#open-modal:checked + .overlay {
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+  padding: 4rem;
+  border-radius: 2rem;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.header-btn_close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label span {
+  color: #ef4444;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: 0.0625rem solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.checkbox-item {
+  margin-top: 0.5rem;
+}
+
+.tooltip-wrap {
+  position: relative;
+}
+
+.input {
+  border-radius: 0.3rem;
+}
+
+.tooltip {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  background: #1e293b;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 0.75rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tooltip-wrap:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .arrow {
+  position: absolute;
+  bottom: -0.8rem;
+  left: 1rem;
+  border: 0.5rem solid transparent;
+  border-top-color: #1e293b;
+}
+
+/* button */
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: #a855f7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.btn-submit:hover {
+  background: #9333ea;
+}
