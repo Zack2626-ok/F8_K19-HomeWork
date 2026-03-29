@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  height: 200px;
+  margin: 20px;
+  border: 2px solid red;
+}
+
+.box-item {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+}
+
+.container-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-3 .box-1 {
+  margin-bottom: 20px;
+}
+.container-3 .box-2 {
+  margin-bottom: 50px;
+}
+
+.container-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-4 .box-1 {
+  margin-right: 10px;
+}
+
+.container-4 .box-2 {
+  margin-right: 40px;
+}
+
+.container-5 {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-6 .box-1,
+.container-6 .box-2,
+.container-6 .box-3 {
+  margin-top: 10px;
+}
+
+.container-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-7 .box-1 {
+  margin-bottom: 60px;
+}
+
+.container-7 .box-2 {
+  margin-bottom: 20px;
+}
+
+.container-8 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-8 .box-1,
+.container-8 .box-2,
+.container-8 .box-3 {
+  margin: auto 0;
+}
+
+.container-9 {
+  display: flex;
+  justify-content: center;
+}
+
+.container-9 .box-1,
+.container-9 .box-2,
+.container-9 .box-3 {
+  display: flex;
+  margin-left: 20px;
+}
+
+.container-9 .box-1 {
+  margin-top: 20px;
+}
+.container-9 .box-2 {
+  margin-top: 45px;
+}
+.container-9 .box-3 {
+  margin-top: 65px;
+}
+
+.container-10 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-10 .box-2 {
+  margin: auto;
+}
+
+.container-10 .box-3 {
+  margin-top: auto;
+}
