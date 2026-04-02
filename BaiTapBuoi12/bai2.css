@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f9fa;
+  font-family: Roboto;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.desc {
+  font-size: 15px;
+  color: #7f8c8d;
+}
+
+/* content */
+.card {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-item {
+  flex: 0 0 calc((100% - 50px) / 3);
+  max-width: 350px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-item .image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-header {
+  position: relative;
+}
+
+.badge,
+.icon,
+.btn-share,
+.icon-heart {
+  position: absolute;
+}
+
+.badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.badge-sale,
+.badge-rent {
+  top: 15px;
+  left: 12px;
+}
+
+.badge-sale {
+  background: #e74c3c;
+}
+
+.badge-rent {
+  background: #e67e22;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2c3e50;
+  color: #ffffff;
+  top: 13px;
+  left: 100px;
+}
+
+.badge-house-type {
+  top: 15px;
+  right: 12px;
+  background: #34495e;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.badge-price {
+  bottom: 15px;
+  left: 12px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #16a085;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-share {
+  height: 36px;
+  bottom: 13px;
+  right: 60px;
+  color: #7f8c8d;
+}
+
+.btn-share:hover {
+  background: #3498db;
+  color: #ffffff;
+}
+
+.icon-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #e74c3c;
+  bottom: 13px;
+  right: 10px;
+}
+
+.btn-like-2 {
+  display: none;
+}
+
+.icon-heart:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.icon-heart:hover .btn-like-2 {
+  display: block;
+}
+.icon-heart:hover .btn-like {
+  display: none;
+}
+
+/* card-content */
+.card-content {
+  padding: 18px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.card-title {
+  margin-top: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.user-info {
+  margin-top: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info .block {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-info .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #bdc3c7;
+  color: #ffffff;
+}
+
+.user-info .username {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.posting-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.detail {
+  display: flex;
+  border-top: 1px solid #ecf0f1;
+  padding-top: 20px;
+}
+
+.detail .info {
+  gap: 6px;
+  margin-left: 5px;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.acreage {
+  margin-right: 20px;
+}
