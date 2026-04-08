@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #e8e8e8;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 998;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: #3a3a3a;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.nav--close-icon {
+  display: none;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 2rem;
+}
+
+.header--toggle {
+  display: none;
+}
+
+.container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+}
+
+.container__content {
+  flex: 1;
+}
+
+.container__content-title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.container__content-desc {
+  margin-top: 1rem;
+}
+
+.container__card {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card__item {
+  width: calc((100% - 2rem) / 3);
+  border: 4px solid black;
+}
+.card__item-title {
+  padding: 1rem;
+  background: #3a3a3a;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.container__sidebar {
+  padding: 1.5rem;
+  width: 300px;
+  min-height: 400px;
+  background: #3a3a3a;
+  color: #fff;
+}
+/* ! Tablet */
+@media screen and (max-width: 768px) {
+  .header--toggle {
+    display: block;
+  }
+
+  .header__nav {
+    position: fixed;
+    flex-direction: column;
+    width: 280px;
+    height: 100vh;
+    padding: 2rem;
+    background: #3a3a3a;
+    right: -300px;
+    top: 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 1;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  .nav--close-icon {
+    display: block;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    transition: rotate 0.3s ease;
+  }
+
+  .nav--close-icon:hover {
+    rotate: 90deg;
+  }
+
+  .header__nav-link {
+    margin: 0;
+    padding: 1.5rem;
+    border-bottom: 1px solid #cccc;
+  }
+
+  body:has(#input-toggle:checked) .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #input-toggle:checked ~ .header__nav {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+  .container__sidebar {
+    width: 250px;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+}
+
+/* ! Mobie */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .container__card {
+    flex-direction: column;
+  }
+
+  .card__item {
+    width: 100%;
+  }
+
+  .container__sidebar {
+    width: 100%;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .container__content-title {
+    font-size: 1.5rem;
+  }
+
+  .header__nav {
+    width: 280px;
+    right: -280px;
+    padding: 2rem 1.5rem;
+  }
+}
