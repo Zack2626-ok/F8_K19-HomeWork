@@ -2,11 +2,13 @@ const numbers = [9, 8, 3, 5, 6, 2, 7, 9];
 // Expected result: 8
 
 function findSecondLagestNum(arrNumbers) {
+  if (arrNumbers.length < 2) return;
+
   let maxValue = null;
   let secondValue = null;
   maxValue = arrNumbers[0];
 
-  for (const number of numbers) {
+  for (const number of arrNumbers) {
     if (maxValue < number) {
       secondValue = maxValue;
       maxValue = number;
@@ -57,7 +59,7 @@ function quickSort(numbers) {
       rightArr.push(number);
     }
   }
-  return [...leftArr, midNum, ...rightArr];
+  return [...quickSort(leftArr), midNum, ...quickSort(rightArr)];
 }
 
 console.log(quickSort(filteredNumbers));
