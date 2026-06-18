@@ -48,9 +48,8 @@ const data = {
 
 // Sử dụng DOM để render ra file hóa đơn sau (HTML)
 
-const billList = data.items
-  .map((billItem) => {
-    return `
+const billList = data.items.map((billItem) => {
+  return `
     <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
       <td class="text-xs text-slate-300 font-semibold text-center px-3 py-4">${billItem.no}</td>
       <td class="text-sm font-semibold text-slate-800 px-3 py-4">${billItem.name}</td>
@@ -58,9 +57,7 @@ const billList = data.items
       <td class="text-sm text-slate-500 font-medium text-right px-3 py-4">${billItem.price}</td>
       <td class="text-sm font-bold text-slate-800 text-right px-3 py-4">${billItem.price * billItem.quantity}</td>
   </tr>`;
-  })
-  .join("");
-
+});
 const subTotal = data.items.reduce((total, item) => {
   return total + item.quantity * item.price;
 }, 0);
