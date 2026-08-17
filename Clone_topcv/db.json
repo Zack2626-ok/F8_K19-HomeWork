@@ -1,0 +1,67 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Kiến Trúc Sư Quy Hoạch - Cảnh Quan",
+      "company": "Công ty Cổ phần Đầu tư Nhà và Thương mại...",
+      "salary": "Thoả thuận",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "2",
+      "title": "Kế Toán Trưởng - Yêu Cầu Có Chứng Chỉ Hành Nghề",
+      "company": "CÔNG TY CP CÔNG NGHỆ GIÁO DỤC TRƯỜNG...",
+      "salary": "25 - 32 triệu",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "3",
+      "title": "Kỹ Sư Media Server & Projection Mapping - Đi Làm Ngay (Hà Nội)",
+      "company": "Công ty cổ phần Công nghệ Proton",
+      "salary": "Thoả thuận",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "4",
+      "title": "Giám Sát Kiến Trúc & Nội Thất / Giám Sát Nội Thất _ Lương Upto 17tr",
+      "company": "CÔNG TY TNHH KIẾN TRÚC VÀ NỘI THẤT...",
+      "salary": "13 - 17 triệu",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "5",
+      "title": "Kỹ Sư Kết Cấu Công Trình | Lương Từ 18 - 25 Triệu (Hà Nội)",
+      "company": "CÔNG TY CỔ PHẦN TƯ VẤN THIẾT KẾ CÔNG TRÌNH...",
+      "salary": "18 - 25 triệu",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "6",
+      "title": "Kế Toán Trưởng Thu Nhập Tới 25 Triệu Tại Hà Nội",
+      "company": "CÔNG TY CỔ PHẦN SẢN XUẤT VÀ KINH DOANH...",
+      "salary": "22 - 25 triệu",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "7",
+      "title": "Kỹ Sư VR/AR/XR - Đi Làm Ngay (Hà Nội)",
+      "company": "Công ty cổ phần Công nghệ Proton",
+      "salary": "Thoả thuận",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "8",
+      "title": "Kế Toán Thanh Toán/Kế Toán Viên - Từ 1 Năm Kinh Doanh",
+      "company": "Công Ty Cổ Phần Kinh Doanh Chế Biến Nông...",
+      "salary": "9 - 12 triệu",
+      "location": "Hà Nội"
+    },
+    {
+      "id": "9",
+      "title": "Nhân Viên Bảo Hiểm Bảo Lãnh (Hà Nội) - Lương Up To 12 Triệu",
+      "company": "BỆNH VIỆN ĐA KHOA HỒNG NGỌC PHÚC TRƯỜNG...",
+      "salary": "9 - 12 triệu",
+      "location": "Hà Nội"
+    }
+  ]
+}

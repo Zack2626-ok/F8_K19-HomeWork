@@ -1,0 +1,141 @@
+.job-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.job-card:hover {
+  border-color: #00b14f;
+  box-shadow: 0 4px 16px rgba(0, 177, 79, 0.12);
+  transform: translateY(-2px);
+}
+
+.job-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.job-card-logo-box {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.job-card-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.job-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0; /* Cho phép text truncation hoạt động */
+}
+
+.job-card-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.job-card:hover .job-card-title {
+  color: #00b14f;
+}
+
+.job-card-company {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Bottom Section: Badges & Favorite Heart */
+.job-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.job-card-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.job-card-tag {
+  background-color: #f1f5f9;
+  color: #334155;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 14px;
+  white-space: nowrap;
+}
+
+.job-card-tag-salary {
+  font-weight: 600;
+  color: #334155;
+}
+
+.job-card-favorite-btn {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #00b14f;
+  background-color: #ffffff;
+  color: #00b14f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.job-card-favorite-btn:hover {
+  background-color: #00b14f;
+  color: #ffffff;
+}
+
+.job-card-favorite-btn.active {
+  background-color: #00b14f;
+  color: #ffffff;
+}
+
+.job-card-favorite-btn i {
+  font-size: 13px;
+}
