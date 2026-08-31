@@ -1,0 +1,113 @@
+.jobs-page-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-top: 32px;
+  padding-bottom: 40px;
+}
+
+.jobs-sidebar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  padding: 20px;
+  height: fit-content;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212529;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.filter-icon {
+  color: #00b14f;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #495057;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.filter-option input[type="checkbox"] {
+  accent-color: #00b14f;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: var(--shadow-sm);
+}
+
+.list-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #212529;
+}
+
+.list-count {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.sort-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  font-size: 13px;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-btn:hover,
+.sort-btn.active {
+  background-color: #e8f5e9;
+  color: #00b14f;
+  border-color: #00b14f;
+  font-weight: 600;
+}
+
+.job-list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

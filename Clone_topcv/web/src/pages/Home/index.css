@@ -1,0 +1,281 @@
+.home-page {
+  padding-bottom: 40px;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+  padding: 48px 0 36px 0;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-size: 15px;
+  color: #6c757d;
+  margin-bottom: 28px;
+}
+
+.hero-sub strong {
+  color: #00b14f;
+}
+
+.home-search-box {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  gap: 8px;
+}
+
+.search-cat-btn,
+.search-loc-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.search-main-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 12px 16px;
+  color: #333;
+}
+
+.home-search-box .search-submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #00b14f;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.home-search-box .search-submit-btn:hover {
+  background-color: #009643;
+}
+
+/* Category + Banner */
+.cat-banner-section {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.cat-list {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  padding: 8px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-item:hover {
+  background-color: #f0faf4;
+  color: #00b14f;
+}
+
+.cat-chevron {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.banner-slider {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.banner-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4ade80;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.banner-title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.banner-subtitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: #facc15;
+  margin-bottom: 12px;
+}
+
+.banner-text {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  padding: 16px 24px;
+  margin-top: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #212529;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-icon {
+  color: #00b14f;
+  font-size: 18px;
+}
+
+.cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e8f5e9;
+  color: #00b14f;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #00b14f;
+  color: #ffffff;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #212529;
+}
+
+.section-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.section-tab {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #6c757d;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.section-tab.active {
+  background-color: #00b14f;
+  color: #ffffff;
+}
+
+.view-all-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #00b14f;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Grid */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  color: #6c757d;
+}

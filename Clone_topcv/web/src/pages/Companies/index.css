@@ -1,0 +1,63 @@
+.companies-header {
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+.companies-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 8px;
+}
+
+.companies-sub {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.companies-search-row {
+  max-width: 680px;
+  margin: 0 auto 36px auto;
+  display: flex;
+  gap: 12px;
+}
+
+.companies-search-input {
+  flex: 1;
+  padding: 12px 18px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.companies-search-input:focus {
+  border-color: #00b14f;
+}
+
+.companies-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #00b14f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.companies-search-btn:hover {
+  background-color: #009643;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
